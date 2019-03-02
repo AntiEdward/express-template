@@ -10,7 +10,9 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.engine('pug', require('pug').__express) //没有这句会报错 找不到pug
+// app.engine('pug', require('pug').__express) 
+// 没有这句会报错 找不到pug
+// npm install --save express jade pug 解决
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
